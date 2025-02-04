@@ -17,7 +17,10 @@ st.markdown("# This is my first streamlit app!")
 
 # Create a button that users can click.
 # If the button is clicked, the message changes.
-
+if st.button("Click me!"):
+  st.write("You clicked the button! Great job!")
+else:
+  st.write("I dare you to click this button")
 # ------------------------
 # COLOR PICKER WIDGET
 # ------------------------
