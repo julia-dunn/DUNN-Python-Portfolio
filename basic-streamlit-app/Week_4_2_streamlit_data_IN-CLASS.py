@@ -32,7 +32,7 @@ city = st.selectbox("Select a city", df["City"].unique()) # makes data frame sho
 filtered_df = df[df["City"] == city] # creates data frame of information of people in that city, name, age, index, etc.
 
 # Display the filtered results
-st.write(f"People in {city}:")
+st.write(f"People in {city}:") #f string to take variable you created and insert them with curly brackets
 st.dataframe(filtered_df)
 
 # ================================
@@ -42,7 +42,7 @@ st.dataframe(filtered_df)
 # Now, instead of creating a DataFrame manually, we load a CSV file
 # This teaches students how to work with external data in Streamlit
 # # Ensure the "data" folder exists with the CSV file
-df = pd.read_csv("/Users/juliadunn/Desktop/elements of computing II/VS_Code_Files/Dunn-Python-Portfolio/basic-streamlit-app/data/sample_data.csv")
+df = pd.read_csv("basic-streamlit-app/data/sample_data.csv")
 # Display the imported dataset
 st.write("Here's the dataset loaded from a csv file:")
 st.dataframe(df)
