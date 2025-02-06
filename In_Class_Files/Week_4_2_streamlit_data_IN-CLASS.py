@@ -26,11 +26,14 @@ st.dataframe(df)
 
 # Using a selectbox to allow users to filter data by city
 # Students learn how to use widgets in Streamlit for interactivity
+city = st.selectbox("Select a city", df["City"].unique()) # makes data frame showing each different city, doesn't have new option for people in same city/only unique values
 
 # Filtering the DataFrame based on user selection
- 
-# Display the filtered results
+filtered_df = df[df["City"] == city] # creates data frame of information of people in that city, name, age, index, etc.
 
+# Display the filtered results
+st.write(f"People in {city}:")
+st.dataframe(filtered_df)
 
 # ================================
 # Step 3: Importing Data Using a Relative Path
@@ -39,19 +42,22 @@ st.dataframe(df)
 # Now, instead of creating a DataFrame manually, we load a CSV file
 # This teaches students how to work with external data in Streamlit
 # # Ensure the "data" folder exists with the CSV file
+df = pd.read_csv("/Users/juliadunn/Desktop/elements of computing II/VS_Code_Files/Dunn-Python-Portfolio/basic-streamlit-app/data/sample_data.csv")
 # Display the imported dataset
-
+st.write("Here's the dataset loaded from a csv file:")
+st.dataframe(df)
 
 # Using a selectbox to allow users to filter data by city
 # Students learn how to use widgets in Streamlit for interactivity
-
+city = st.selectbox("Select a city", df["City"].unique())
 
 # Filtering the DataFrame based on user selection
-
-
+filtered_df = df[df["City"] == city]
 
 
 # Display the filtered results
+st.write(f"People in {city}:")
+st.dataframe(filtered_df) # does the same thing as above but with the CSV file and not the manual data frame 
 
 # ================================
 # Summary of Learning Progression:
