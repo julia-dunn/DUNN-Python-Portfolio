@@ -11,4 +11,6 @@ Within this repository, I'd like to remain structured and organized such that bo
 
 #### Projects
 
-##### Who are Palmer's Penguins?
+##### [Who are Palmer's Penguins?](https://github.com/julia-dunn/DUNN-Python-Portfolio/tree/beeb0c519df8e911a2f0b83560ebc9edb7912d2f/basic-streamlit-app)
+
+Use this app to learn more about Palmer's Penguins: who they are and where they came from. Penguins are one of the most interesting animals and as you interact with this platform, I hope you are intruiged by how the statistical information demonstrates their demographic.
