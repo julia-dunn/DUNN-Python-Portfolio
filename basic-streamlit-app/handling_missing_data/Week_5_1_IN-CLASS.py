@@ -30,19 +30,24 @@ df = pd.read_csv("titanic.csv")
 # ------------------------------------------------------------------------------
 # Show key statistical measures like mean, standard deviation, etc.
 st.write("**Summary Statistics**")
-st.dataframe(df.describe())
+st.write(df.shape) # age missing not at random, not keeping track of children (deleted in dataset, real titanic people did) MNAR
+st.dataframe(df.describe()) # only describes numeric columns 
 
 # ------------------------------------------------------------------------------
 # Check for Missing Values
 # ------------------------------------------------------------------------------
 # Display the count of missing values for each column.
 st.write("**Number of Missing Values by Column**")
-
+# st.dataframe(df.isnull()) # checked values are null (true), unchecked values are not null (false)
+st.dataframe(df.isnull().sum()) # use age for imputations on thursday
 # ------------------------------------------------------------------------------
 # Visualize Missing Data
 # ------------------------------------------------------------------------------
 # Create a heatmap to visually indicate where missing values occur.
-
+st.subheader("Heatmap of Missing Values")
+fig, ax = plt.subplots() #plt is matlibpy.plot, subplots method takes canvas and puts it in python environment, fig is figure (looking for visualization code), ax is customizable axis
+sns.heatmap(df.isnull(),cmap = "viridis",cbar = False) # extra parameters for formatting, with just sns it does not go into the actual app itself
+st.pyplot(fig)
 
 # ================================================================================
 # Interactive Missing Data Handling
