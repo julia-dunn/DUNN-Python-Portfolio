@@ -47,7 +47,7 @@ st.dataframe(df.isnull().sum()) # use age for imputations on thursday
 st.subheader("Heatmap of Missing Values")
 fig, ax = plt.subplots() #plt is matlibpy.plot, subplots method takes canvas and puts it in python environment, fig is figure (looking for visualization code), ax is customizable axis
 sns.heatmap(df.isnull(),cmap = "viridis",cbar = False) # extra parameters for formatting, with just sns it does not go into the actual app itself
-st.pyplot(fig)
+st.pyplot(fig) # reveals our visualization
 
 # ================================================================================
 # Interactive Missing Data Handling
@@ -59,16 +59,39 @@ st.pyplot(fig)
 # - Dropping columns if more than 50% of the values are missing
 # - Imputing missing values with mean, median, or zero
 # ================================================================================
+st.subheader("Handle Missing Data")
 
+column = st.selectbox("Choose a column to fill", 
+             df.select_dtypes(include=["number"]).columns) # creates a list of column names where those columns are numeric data types
+
+method = st.radio("Choose a method", 
+                  ["Original DF", "Drop Rows", 
+                   "Impute Mean", "Impute Median", "Impute Zero"])
 
 # Work on a copy of the DataFrame so the original data remains unchanged.
+# df is going to stay untouched\
+# df_clean is a copy of df that will change with the custom filters
+df_clean = df.copy()
+
+if method == "Original DF":
+    pass # leaves df_clean as df.copy(), makes no changes
+elif method == "Drop Rows":
+    df_clean = df_clean.dropna(subset=[column]) # clarifies to only drop if missing the data in specific column, without subset drops all rows with any missing data 
+elif method == "Impute Mean":
+    df_clean[column] = df_clean[column].fillna(df_clean[column].mean())
+elif method == "Impute Median":
+    df_clean[column] = df_clean[column].fillna(df_clean[column].median())
+elif method == "Impute Zero":
+    df_clean[column] = df_clean[column].fillna(0)
 
 # Apply the selected method to handle missing data.
-
 
 # ------------------------------------------------------------------------------
 # Compare Data Distributions: Original vs. Cleaned
 #
 # Display side-by-side histograms and statistical summaries for the selected column.
 # ------------------------------------------------------------------------------
-
+st.subheader("Cleaned Data Distribution")
+fig, ax = plt.subplots()
+sns.histplot(df_clean[column], kde=True) #kde=True creates line of distrubution
+st.pyplot(fig)
