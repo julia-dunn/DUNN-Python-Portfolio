@@ -1,4 +1,4 @@
-# This is my ReadMe for my Basic Streamlit App
+# ReadMe for Who Are Palmer's Penguins?
 
 ## Purpose of App:
 - Learn more about penguins from many different locations! Penguins of different species and sizes are both interesting and adorable
