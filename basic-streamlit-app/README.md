@@ -28,3 +28,5 @@ In order to run basic-streamlit-app, run in terminal "streamlit run basic-stream
 - Engagement with viewer regarding opinion of penguins
 - Encouragement of viewer to interact with World Wildlife website (adopt a penguin)!
 - Filters by year, species, and island
+
+Enjoy the App!
