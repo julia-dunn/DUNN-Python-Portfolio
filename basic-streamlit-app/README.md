@@ -21,3 +21,9 @@
 - penguins.vsv
 
 In order to run basic-streamlit-app, run in terminal "streamlit run basic-streamlit-app/main.py"
+
+## Key features:
+- Photos of different species of penguins!
+- Photos of the different islands the penguins are from!
+- Engagement with viewer regarding opinion of penguins
+- Encouragement of viewer to interact with World Wildlife website (adopt a penguin)!
