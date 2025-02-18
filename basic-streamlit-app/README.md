@@ -1,9 +1,9 @@
 # This is my ReadMe for my Basic Streamlit App
 
-## Purpose of App
+## Purpose of App:
 - Learn more about penguins from many different locations! Penguins of different species and sizes are both interesting and adorable
 
-## This app provides information on many different features of Palmer's Penguins including
+## What's in the dataset:
 - species
 - island
 - bill length (mm)
@@ -12,7 +12,7 @@
 - body mass (g)
 - sex
 
-## How to use the app
+## How to use the app:
 
 ### Requirements
 - Python
