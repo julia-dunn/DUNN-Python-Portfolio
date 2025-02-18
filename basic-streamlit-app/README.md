@@ -27,3 +27,4 @@ In order to run basic-streamlit-app, run in terminal "streamlit run basic-stream
 - Photos of the different islands the penguins are from!
 - Engagement with viewer regarding opinion of penguins
 - Encouragement of viewer to interact with World Wildlife website (adopt a penguin)!
+- Filters by year, species, and island
