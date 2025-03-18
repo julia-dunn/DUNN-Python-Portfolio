@@ -20,8 +20,8 @@ Finally, I was able to use my neat data to create visualizations that could be e
 To run this notebook, you must install and import several dictionaries which are later referred to. These include pandas, seaborn, matplotlib, squarify, and numpy.
 
 To install: 
-<code>
-!pip install pandas
+
+<code>!pip install pandas
 !pip install seaborn
 !pip install matplotlib.pyplot
 !pip install squarify
@@ -29,10 +29,9 @@ To install:
 <code>
 
 To import:
-<code>
-import pandas as pd
+
+<code>import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import squarify
-import numpy as np
-<code>
+import numpy as np<code>
