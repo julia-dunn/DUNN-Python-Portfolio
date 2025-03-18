@@ -36,7 +36,7 @@ Finally, I was able to use my neat data to create visualizations that could be e
 
 Visualization comparing Budget with respect to Federal GDP:
 
-![Visualization comparing Budget with respect to Federal GDP](https://postimg.cc/9DFqBjZY)
+[![Screenshot-2025-03-17-at-9-40-19-PM.png](https://i.postimg.cc/Mp1bq6GN/Screenshot-2025-03-17-at-9-40-19-PM.png)](https://postimg.cc/9DFqBjZY)
 
 ## Instructions
 
