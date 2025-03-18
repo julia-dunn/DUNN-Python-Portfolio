@@ -21,17 +21,20 @@ To run this notebook, you must install and import several dictionaries which are
 
 To install: 
 
-<code>!pip install pandas
+```
+pip install pandas
 !pip install seaborn
 !pip install matplotlib.pyplot
 !pip install squarify
 !pip install numpy
-<code>
+```
 
 To import:
 
-<code>import pandas as pd
+```
+import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import squarify
-import numpy as np<code>
+import numpy as np
+```
