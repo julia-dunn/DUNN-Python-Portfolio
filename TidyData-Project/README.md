@@ -11,9 +11,32 @@ According to the Tidy Data Pricples, neat data is such that:
 
 Prior to my development of this project, the data was jumbled such that one column contained multiple variables, and each row also represented a *variable*. 
 
+Demoonstration of melting data to follow tidy data principles:
+
+```
+df_fedrd_melted = pd.melt(df_fedrd,
+                          id_vars = 'department',
+                          value_vars = df_fedrd.columns[1:],
+                          var_name = 'Year_GDP",
+                          value_name = 'Research and Development Budget')
+```
+
 After tidying the data, I then created tables which represented average values for a neater, numerical analysis. 
 
+Demonstration of creating pivot tables:
+
+```
+pivot_table_department = pd.pivot_table(df_fedrd_melted_tidy,
+                         values = ['Research and Development Budget', 'GDP'],
+                         index = 'department',
+                         aggfunc = 'mean)
+```
+
 Finally, I was able to use my neat data to create visualizations that could be easily understood. This not only was helpful in understanding the context of the dataset, but also created insightful visualizations which allowed me to make inferences. 
+
+Visualization comparing Budget with respect to Federal GDP:
+
+!(Screenshot 2025-03-17 at 9.40.19 PM.png)
 
 ## Instructions
 
@@ -22,7 +45,7 @@ To run this notebook, you must install and import several dictionaries which are
 To install: 
 
 ```
-pip install pandas
+!pip install pandas
 !pip install seaborn
 !pip install matplotlib.pyplot
 !pip install squarify
@@ -38,3 +61,19 @@ import matplotlib.pyplot as plt
 import squarify
 import numpy as np
 ```
+
+Once the above have been run, the notebook will be accessible and legible such that the visualizations and analysis are understood. 
+
+## Dataset Description
+
+
+
+## References 
+- https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf 
+- https://vita.had.co.nz/papers/tidy-data.pdf 
+- https://stackoverflow.com/questions/15891038/change-column-type-in-pandas 
+- https://stackoverflow.com/questions/51004029/create-a-new-dataframe-based-on-rows-with-a-certain-value 
+- https://stackoverflow.com/questions/20461165/how-to-convert-index-of-a-pandas-dataframe-into-a-column
+- https://stackoverflow.com/questions/20490274/how-to-reset-index-in-a-pandas-dataframe
+- https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html
+- https://stackoverflow.com/questions/41400136/how-to-do-waffle-charts-in-python-square-piechart
