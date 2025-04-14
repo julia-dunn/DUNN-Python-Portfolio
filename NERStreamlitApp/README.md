@@ -64,8 +64,16 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 
 1. Upload and Title Text
 
+<img width="725" alt="Screenshot 2025-04-14 at 5 17 48 PM" src="https://github.com/user-attachments/assets/b1556e7b-34da-4c64-a90f-f7f57345beb5" />
+
 2. Create Label and Pattern
+
+<img width="724" alt="Screenshot 2025-04-14 at 5 17 59 PM" src="https://github.com/user-attachments/assets/033ef52b-0075-4f72-b2c6-8e2a06328b29" />
 
 3. Dataframe of Entities
 
+<img width="302" alt="Screenshot 2025-04-14 at 5 18 07 PM" src="https://github.com/user-attachments/assets/4d6fe527-e7d9-421c-9cec-deb06e2e4bc2" />
+
 4. DisplaCy Visualization of NER
+
+<img width="720" alt="Screenshot 2025-04-14 at 5 18 13 PM" src="https://github.com/user-attachments/assets/4f23e66b-4a95-4fdd-913b-3130fd4c00ce" />
