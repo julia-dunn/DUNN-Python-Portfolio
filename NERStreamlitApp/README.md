@@ -44,6 +44,7 @@ Installation Commands to run in Terminal:
     pip install spacy
     python -m spacy download en_core_web_sm
 }
+```
 
 ## App Features
 
