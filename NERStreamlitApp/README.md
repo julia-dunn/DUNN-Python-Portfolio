@@ -27,6 +27,7 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 }
 ```
 
+
 ## Instructions 
 
 ## App Features
@@ -34,5 +35,9 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 ## References
 
 - [Linked Headings](https://gist.github.com/rachelhyman/b1f109155c9dafffe618)
+- [Code Markdown Syntax](https://www.markdownguide.org/extended-syntax/)
+- [Standard Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
+- [.strip() for error resolution](https://www.w3schools.com/python/ref_string_strip.asp)
+- [Rendering with displacy](https://medium.com/@groxli/create-a-spacy-visualizer-with-streamlit-8b9b41b36745)
 
 ## Examples

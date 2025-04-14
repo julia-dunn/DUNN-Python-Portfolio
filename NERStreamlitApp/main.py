@@ -58,9 +58,9 @@ if uploaded_file: # if something has been uploaed via st.file_uploader...
     ent_df1 # display dataframe in streamlit app
 
 ## visualization for uploaded file
-    html = displacy.render(doc1, style = "ent")
-    st.write("Diplay of Annotated Text")
-    st.markdown(html, unsafe_allow_html=True)
+    html1 = displacy.render(doc1, style="ent", jupyter=False) # jupyter=False is necessary to indicate this is a py file, not a jupyter notebook
+    st.write(f"Display of Annotated Text: {title}")
+    st.markdown(html1, unsafe_allow_html=True) # unsafe_allow_html=True pushes stremalit to render the text as an HTML, not as text
 
 # by repeating for ent in doc.ents loop, as well as df and display.render, one can analyze both an uploaded text and an inputted text with the same entity ruler at the same time
 # otherwise, the input text would replace the uploaded file text
@@ -79,15 +79,12 @@ if input_text: # if instead text has been typed into text input
     ent_df2 # display dataframe in streamlit
 
 ## visualization for inputted text
-    html = displacy.render(doc2, style="ent")
+    html2 = displacy.render(doc2, style="ent", jupyter=False) # jupyter=False is necessary to indicate this is a py file, not a jupyter notebook
     st.write(f"Display of Annotated Text: {title}")
-    st.markdown(html, unsafe_allow_html=True)
+    st.markdown(html2, unsafe_allow_html=True) # unsafe_allow_html=True pushes stremalit to render the text as an HTML, not as text
 else:
     text = "No Text Inputted"
     doc = nlp(text)
-
-st.write("generated patterns")
-st.json(patterns)
 
 # write into streamlit the sample texts which can be copied/pasted into the text input
 st.markdown("#### Sample Texts!")
