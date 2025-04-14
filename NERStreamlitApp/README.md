@@ -46,7 +46,7 @@ Installation Commands to run in Terminal:
 }
 ```
 
-Finally, to run the app locally:
+Finally, to run the app locally, run in integrated terminal:
 ```
 {
     streamlit run main.py
@@ -54,6 +54,29 @@ Finally, to run the app locally:
 ```
 
 ## App Features
+
+Ability to upload text
+- With this app, you can upload a local .txt file. 
+- This allows for NER analysis of long format text, as opposed to only short format text which is typed directly into the app.
+
+Ability to type/paste text
+- With this app, you can also type into the textbox with custom texts. 
+- This allows for quick analyisis of short phrases, without needing to create .txt files on your local device.
+
+Ability to create an entity ruler with any number of patterns
+- Because you can select the number of entities, you are not limited. If your dataset required 50 entities, that is technically possible. Or, if your dataset only needs 1, that is also possible.
+- This allows for customization and flexibility depending on the size and complexity of the doc.
+
+Ability to use multi-word patterns
+- The patterns can be lists of objects of multiple words. For exaple, one pattern demonstrated below is labeled  "MUSICAL" and includes the patterns: ["An Evening with Mandy Patinkin", "Big Fish"]
+- Allows for further customization
+-Allows user to override preexisting entity rules
+
+Visualizes Analyzed Text
+- With the highlighted HTML visualization of the text, a user can easily see if the correct entities have been identified. 
+
+Display of Entity Ruler Pattern
+- Although collapsable, the app also visualizes the pattern such that the user can ensure they are testing for the correct labels and patterns. 
 
 ## References
 
