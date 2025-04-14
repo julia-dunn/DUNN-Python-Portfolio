@@ -41,3 +41,14 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 - [Rendering with displacy](https://medium.com/@groxli/create-a-spacy-visualizer-with-streamlit-8b9b41b36745)
 
 ## Examples
+
+### Example 1: DPAC Advertisement
+
+1. Input and Title Text
+![First step of NER](NERStreamlitApp/Screenshot 2025-04-14 at 5.03.47 PM.png)
+2. Create Label and Pattern
+![Second step of NER](NERStreamlitApp/Screenshot 2025-04-14 at 5.04.08 PM.png)
+3. DataFrame of Entities
+![Dataframe of Entities](NERStreamlitApp/Screenshot 2025-04-14 at 5.04.16 PM.png)
+4. DisplaCy Visualization of NER
+![Visualization](NERStreamlitApp/Screenshot 2025-04-14 at 5.04.24 PM.png)
