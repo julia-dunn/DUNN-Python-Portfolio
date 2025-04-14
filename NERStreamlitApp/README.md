@@ -20,12 +20,12 @@ The purpose of this project was to develop my skills both in creating named enti
 
 spaCy is a very specific dictionary which requires attention to detail, especially regarding formatting and syntax. In creating this NER app, the most challenging part was ensure text inputs aligned with the expected format for spaCy. A typical entity ruler follows this pattern:
 
-'''
+```
 {
     "label": "POS"
     "pattern": {"lower": word.lower()}
 }
-'''
+```
 
 ## Instructions 
 
