@@ -46,11 +46,11 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 
 1. Input and Title Text
 
-![FirstStep](NERStreamlitApp/Screenshot 2025-04-14 at 5.03.47 PM.png)
+![FirstStep](Dunn-Python-Portfolio/NERStreamlitApp/Screenshot 2025-04-14 at 5.03.47 PM.png)
 
 2. Create Label and Pattern
 
-![SecondStep](NERStreamlitApp/Screenshot 2025-04-14 at 5.04.08 PM.png)
+![SecondStep](Dunn-Python-Portfolio/NERStreamlitApp/Screenshot 2025-04-14 at 5.04.08 PM.png)
 
 3. DataFrame of Entities
 
