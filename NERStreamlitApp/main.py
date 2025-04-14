@@ -86,6 +86,9 @@ else:
     text = "No Text Inputted"
     doc = nlp(text)
 
+st.markdown("#### Display of Entity Ruler Patterns")
+st.json(patterns) # displays full pattern in code format with indices
+
 # write into streamlit the sample texts which can be copied/pasted into the text input
 st.markdown("#### Sample Texts!")
 st.write("Here are some interesting example texts you could test out!")

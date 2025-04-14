@@ -27,8 +27,23 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 }
 ```
 
+spaCy approaches Named Entity Recognition by using a dictionary of labels and patterns to analyze and match. By using the entity ruler, or dictionary of patterns, the program recognizes the entities, or key words, in a text and depicts their context. 
 
 ## Instructions 
+
+Required Libraries:
+- Streamlit
+- Pandas
+- spaCy
+
+Installation Commands to run in Terminal:
+```
+{
+    pip install streamlit
+    pip install pandas
+    pip install spacy
+    python -m spacy download en_core_web_sm
+}
 
 ## App Features
 
@@ -39,6 +54,8 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 - [Standard Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
 - [.strip() for error resolution](https://www.w3schools.com/python/ref_string_strip.asp)
 - [Rendering with displacy](https://medium.com/@groxli/create-a-spacy-visualizer-with-streamlit-8b9b41b36745)
+- [Iterating over dictionaries, "key=..."](https://realpython.com/iterate-through-dictionary-python/#swapping-keys-and-values-through-iteration)
+- [spaCy Entity Ruler](https://spacy.io/api/entityruler)
 
 ## Examples
 
