@@ -59,3 +59,13 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 4. DisplaCy Visualization of NER
 
 <img width="736" alt="Screenshot 2025-04-14 at 5 04 24 PM" src="https://github.com/user-attachments/assets/3d6b7918-def1-49be-adf3-eba1ff90af95" />
+
+### Example 2: My Introduction
+
+1. Upload and Title Text
+
+2. Create Label and Pattern
+
+3. Dataframe of Entities
+
+4. DisplaCy Visualization of NER
