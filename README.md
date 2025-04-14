@@ -20,3 +20,9 @@ Use this app to learn more about Palmer's Penguins: who they are and where they 
 This jupiter notebook uses tidy data principles to clean and analyze data regarding the federal allocation of the research and development budgets across different departments. This dataset considers data from 1976 to 2017, providing data regarding many different departments. The goal of my project was to tidy the data and complete some data analysis to demonstrate the importance of tidy data such that it can be undestood logically. 
 
 This project, overall, is valuable to my portfolio because it demonstrates my data tidying and manipulation skills, as well as my emphasis on understanding *why* data is represented a specific way.
+
+##### [NER App Project](https://github.com/julia-dunn/DUNN-Python-Portfolio/tree/main/NERStreamlitApp)
+
+This streamlit app ties together my new language processing skills and my knowledge of Streamlit as a developing language. I have used spaCy to create an app which allows users to complete named entity recognition of text files with custom entity rulers. This is interesting because it takes into account the nuances from user interaction, such as extra spaces or empty inputs, and is still able to correctly detect entities. 
+
+This project is valuable to my portfolio because it demonstrates my user focused approach to the task. Furthermore, it demonstrates a wide range of skills and an ability to connect ideas which are seemingly unconnected. Although we learned Streamlit entirely separately from spaCy, I was able to connect the two and create a usable platform. 

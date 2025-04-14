@@ -87,6 +87,7 @@ Display of Entity Ruler Pattern
 - [Rendering with displacy](https://medium.com/@groxli/create-a-spacy-visualizer-with-streamlit-8b9b41b36745)
 - [Iterating over dictionaries, "key=..."](https://realpython.com/iterate-through-dictionary-python/#swapping-keys-and-values-through-iteration)
 - [spaCy Entity Ruler](https://spacy.io/api/entityruler)
+- [Streamlit Cheat Sheet](https://docs.streamlit.io/develop/quick-reference/cheat-sheet)
 
 ## Examples
 
