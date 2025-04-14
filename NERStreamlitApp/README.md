@@ -46,16 +46,16 @@ spaCy is a very specific dictionary which requires attention to detail, especial
 
 1. Input and Title Text
 
-![FirstStep](Dunn-Python-Portfolio/NERStreamlitApp/Screenshot 2025-04-14 at 5.03.47 PM.png)
+<img width="728" alt="Screenshot 2025-04-14 at 5 03 47 PM" src="https://github.com/user-attachments/assets/29d05ff9-7b98-4295-aced-97792efc08c2" />
 
 2. Create Label and Pattern
 
-![SecondStep](Dunn-Python-Portfolio/NERStreamlitApp/Screenshot 2025-04-14 at 5.04.08 PM.png)
+<img width="728" alt="Screenshot 2025-04-14 at 5 04 08 PM" src="https://github.com/user-attachments/assets/6b5e1aae-02a5-4194-94ec-7c1ff31f0802" />
 
 3. DataFrame of Entities
 
-![Dataframe](NERStreamlitApp/Screenshot 2025-04-14 at 5.04.16 PM.png)
+<img width="381" alt="Screenshot 2025-04-14 at 5 04 16 PM" src="https://github.com/user-attachments/assets/d28b3dc9-db93-4b3a-9346-8b3d44035b2c" />
 
 4. DisplaCy Visualization of NER
 
-![Visualization](NERStreamlitApp/Screenshot 2025-04-14 at 5.04.24 PM.png)
+<img width="736" alt="Screenshot 2025-04-14 at 5 04 24 PM" src="https://github.com/user-attachments/assets/3d6b7918-def1-49be-adf3-eba1ff90af95" />
