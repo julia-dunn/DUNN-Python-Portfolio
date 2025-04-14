@@ -46,6 +46,13 @@ Installation Commands to run in Terminal:
 }
 ```
 
+Finally, to run the app locally:
+```
+{
+    streamlit run main.py
+}
+```
+
 ## App Features
 
 ## References
