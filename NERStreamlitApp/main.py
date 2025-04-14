@@ -86,6 +86,9 @@ else:
     text = "No Text Inputted"
     doc = nlp(text)
 
+st.write("generated patterns")
+st.json(patterns)
+
 # write into streamlit the sample texts which can be copied/pasted into the text input
 st.markdown("#### Sample Texts!")
 st.write("Here are some interesting example texts you could test out!")
