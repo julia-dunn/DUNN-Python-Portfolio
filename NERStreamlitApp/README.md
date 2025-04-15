@@ -52,6 +52,7 @@ Finally, to run the app locally, run in integrated terminal:
     streamlit run main.py
 }
 ```
+Or you can access the app via this [link](https://nerapp-juliadunn.streamlit.app/)
 
 ## App Features
 
