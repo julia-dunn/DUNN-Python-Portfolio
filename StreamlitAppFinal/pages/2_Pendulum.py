@@ -31,6 +31,8 @@ df_angles = pd.DataFrame({
 st.markdown("#### Entered Data:")
 st.dataframe(df_angles)
 
+st.session_state["df_angles"] = df_angles
+
 st.markdown(" ### Changing Length")
 st.write("Here, input the angle of elevation, the different lengths of the pendulum, and the time it took to complete 5 oscillations.")
 st.number_input("Angle of Elevation (degrees)", value=None, placeholder="(degrees)")
@@ -59,3 +61,5 @@ df_lengths = pd.DataFrame({
 })
 st.markdown("#### Entered Data:")
 st.dataframe(df_lengths)
+
+st.session_state["df_lengths"] = df_lengths

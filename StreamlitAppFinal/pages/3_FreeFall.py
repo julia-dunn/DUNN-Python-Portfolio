@@ -39,6 +39,8 @@ df_stopwatch = ({
 st.markdown("#### Entered Data")
 st.dataframe(df_stopwatch)
 
+st.session_state["df_stopwatch"] = df_stopwatch
+
 st.markdown(" ### Photogates:")
 m = st.number_input("Number of distances between photogates:", value=1)
 Fdistances = []
@@ -65,3 +67,16 @@ for i in range(m):
     Ptrial_4.append(Pt4)
     Ptrial_5.append(Pt5)
 
+df_photogate = ({
+    "Distance (m)": Fdistances,
+    "Trial 1 (s)": Ptrial_1,
+    "Trial 2 (s)": Ptrial_2,
+    "Trial 3 (s)": Ptrial_3,
+    "Trial 4 (s)": Ptrial_4,
+    "Trial 5 (s)": Ptrial_5
+})
+
+st.markdown("#### Entered Data:")
+st.dataframe(df_photogate)
+
+st.session_state["df_photogate"] = df_photogate

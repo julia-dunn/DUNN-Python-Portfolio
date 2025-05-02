@@ -45,3 +45,5 @@ df_incline = ({
 
 st.markdown("#### Entered Data")
 st.dataframe(df_incline)
+
+st.session_state["df_incline"] = df_incline

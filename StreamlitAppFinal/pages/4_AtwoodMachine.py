@@ -43,3 +43,5 @@ df_machine = ({
 
 st.markdown("#### Data Entered:")
 st.dataframe(df_machine)
+
+st.session_state["df_machine"] = df_machine
