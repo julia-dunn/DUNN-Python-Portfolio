@@ -31,6 +31,11 @@ st.latex(r'''
          g = \frac{2 \Delta y \left( m_1 + m_2 \right)}{t^2 \left( m_1 - m_2 \right)})
          ''')
 st.markdown(" ### Fourth: Incline")
+st.write("The final method you could use to calculate the acceleration due to gravity is a mass sliding down a cart. For this experiment, you will need an incline, a marble or cart, a meter stick, and a stopwatch or a photogate. Setup the materials such that you can change the angle of the incline and measure the distance the mass travels, as demonstrated below.")
+with st.columns(3)[1]:
+    st.image("Screenshot 2025-05-02 at 2.07.54 PM.png")
+st.write("You will drop the marble such that it rolls different distances down the incline and measure the time it takes. In addition, you will measure the time it takes the ball to travel a fixed distance with changing angles of incline.")
+st.write("You will see that the time it takes for the marble to fall depends both on the distance it travels and the angle of incline. The acceleration due to gravity 'g' can be calculated with the following equation:")
 st.latex(r'''
          g = \frac{2x}{t^2 \sin \theta}
          ''')
