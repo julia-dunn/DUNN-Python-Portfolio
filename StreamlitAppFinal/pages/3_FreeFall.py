@@ -1,0 +1,26 @@
+import streamlit as st
+import pandas as pd
+st.title("The Freefall Experiment")
+st.write("Here is where you can input your data for the free fall experiment, both when using a stopwatch and with photogates.")
+st.markdown(" ### Stopwatch:")
+n = st.number_input("Number of heights you dropped the ball from:", value=1)
+for i in range(n):
+    st.markdown(f" #### Configuration {i+1}")
+    st.number_input(f"Height {i+1}", value=None, placeholder="(meters)")
+    c1, c2, c3, c4, c5 = st.columns(5)
+    c1.number_input(f"Trial 1 ({i+1})", value=None, placeholder="time(s)")
+    c2.number_input(f"Trial 2 ({i+1})", value=None, placeholder="time(s)")
+    c3.number_input(f"Trial 3 ({i+1})", value=None, placeholder="time(s)")
+    c4.number_input(f"Trial 4 ({i+1})", value=None, placeholder="time(s)")
+    c5.number_input(f"Trial 5 ({i+1})", value=None, placeholder="time(s)")
+st.markdown(" ### Photogates:")
+m = st.number_input("Number of distances between photogates:", value=1)
+for i in range(m):
+    st.markdown(f" #### Configuration {i+1}")
+    st.number_input(f"Distance {i+1}", value=None, placeholder="(meters)")
+    c1, c2, c3, c4, c5 = st.columns(5)
+    c1.number_input(f"Trial 1 ({i+1}) ", value=None, placeholder="time(s)")
+    c2.number_input(f"Trial 2 ({i+1}) ", value=None, placeholder="time(s)")
+    c3.number_input(f"Trial 3 ({i+1}) ", value=None, placeholder="time(s)")
+    c4.number_input(f"Trial 4 ({i+1}) ", value=None, placeholder="time(s)")
+    c5.number_input(f"Trial 5 ({i+1}) ", value=None, placeholder="time(s)")
