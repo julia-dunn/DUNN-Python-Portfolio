@@ -4,6 +4,7 @@ st.title("The Atwood Machine Experiment")
 st.write("Here is where you can input your data for the atwood machine experiment. How many mass configurations did you use?")
 n = st.number_input("Number of mass configurations:", value=1)
 dist = st.number_input("Distance masses were allowed to fall:", value=None, placeholder="(meters)")
+st.session_state["distance"] = dist
 mass1 = []
 mass2 = []
 Mtrial_1 = []
@@ -14,8 +15,8 @@ Mtrial_5 = []
 for i in range(n):
     st.markdown(f" #### Configuration {i+1}:")
     c1, c2 = st.columns(2)
-    m1 = c1.number_input(f"Mass 1", value=None, placeholder="(grams)", key=f"m1_{i}")
-    m2 = c2.number_input(f"Mass 2", value=None, placeholder="(grams)", key=f"m2_{i}")
+    m1 = c1.number_input(f"Mass 1", value=None, placeholder="(kg)", key=f"m1_{i}")
+    m2 = c2.number_input(f"Mass 2", value=None, placeholder="(kg)", key=f"m2_{i}")
     c1, c2, c3, c4, c5 = st.columns(5)
     Mt1 = c1.number_input(f"Trial 1", value=None, placeholder="time(s)", key=f"Mt1_{i}")
     Mt2 = c2.number_input(f"Trial 2", value=None, placeholder="time(s)", key=f"Mt2_{i}")
@@ -31,9 +32,9 @@ for i in range(n):
     Mtrial_4.append(Mt4)
     Mtrial_5.append(Mt5)
 
-df_machine = ({
-    "Mass 1 (grams)": mass1,
-    "Mass 2 (grams)": mass2,
+df_machine = pd.DataFrame({
+    "Mass 1 (kg)": mass1,
+    "Mass 2 (kg)": mass2,
     "Trial 1 (s)": Mtrial_1,
     "Trial 2 (s)": Mtrial_2,
     "Trial 3 (s)": Mtrial_3,

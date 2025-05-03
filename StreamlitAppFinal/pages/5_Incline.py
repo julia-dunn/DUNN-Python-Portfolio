@@ -2,9 +2,8 @@ import streamlit as st
 import pandas as pd
 st.title("The Incline Experiment")
 st.write("Here you can input your data for the incline experiment. First, input the standard dimensions for your setup.")
-radius = st.number_input("Radius of marble:", value=None, placeholder="(meters)")
-mass = st.number_input("Mass of marble:", value=None, placeholder="(grams)")
-length = st.number_input("Length of track:", value=None, placeholder="(meters)")
+Ilength = st.number_input("Length of track:", value=None, placeholder="(meters)")
+st.session_state["Ilength"] = Ilength
 st.write("You must also input the number of configurations you tested, that is the different heights you set the track to.")
 n = st.number_input("Number of heights:", value=1)
 Iheights = []
@@ -33,7 +32,7 @@ for i in range(n):
     Itrial_4.append(It4)
     Itrial_5.append(It5)
 
-df_incline = ({
+df_incline = pd.DataFrame({
     "Height (m)": Iheights,
     "Distance x (m)": Idistances,
     "Trial 1 (s)": Itrial_1,

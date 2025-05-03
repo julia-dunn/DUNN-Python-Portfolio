@@ -28,7 +28,7 @@ for i in range(n):
     Strial_4.append(St4)
     Strial_5.append(St5)
 
-df_stopwatch = ({
+df_stopwatch = pd.DataFrame({
     "Height (m)": Fheights,
     "Trial 1 (s)": Strial_1,
     "Trial 2 (s)": Strial_2,
@@ -67,7 +67,7 @@ for i in range(m):
     Ptrial_4.append(Pt4)
     Ptrial_5.append(Pt5)
 
-df_photogate = ({
+df_photogate = pd.DataFrame({
     "Distance (m)": Fdistances,
     "Trial 1 (s)": Ptrial_1,
     "Trial 2 (s)": Ptrial_2,
