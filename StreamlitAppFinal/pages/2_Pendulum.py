@@ -4,7 +4,8 @@ st.title("The Pendulum Experiment!")
 st.write("Here is where you can imput your data from the pendulum experiment")
 st.markdown(" ### Changing Angle")
 st.write("Here, input the length of your pendulum, the different angles of elevation you used, and the time it took to complete 5 oscillations.")
-st.number_input("Length of pendulum [m]", value=None, placeholder="(meters)")
+Alength = st.number_input("Length of pendulum [m]", value=None, placeholder="(meters)")
+st.session_state["Alength"] = Alength
 n = st.number_input("Number of Angles:", value=1)
 angles = []
 Atrial_1 = []
@@ -26,7 +27,7 @@ df_angles = pd.DataFrame({
     "Angle (degrees)": angles,
     "Trial 1 (s)": Atrial_1,
     "Trial 2 (s)": Atrial_2,
-    "Trial_3 (s)": Atrial_3
+    "Trial 3 (s)": Atrial_3
 })
 st.markdown("#### Entered Data:")
 st.dataframe(df_angles)
@@ -35,7 +36,8 @@ st.session_state["df_angles"] = df_angles
 
 st.markdown(" ### Changing Length")
 st.write("Here, input the angle of elevation, the different lengths of the pendulum, and the time it took to complete 5 oscillations.")
-st.number_input("Angle of Elevation (degrees)", value=None, placeholder="(degrees)")
+Langle = st.number_input("Angle of Elevation (degrees)", value=None, placeholder="(degrees)")
+st.session_state["Langle"] = Langle
 m = st.number_input("Number of Lengths:", value=1)
 lengths = []
 Ltrial_1 = []
