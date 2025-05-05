@@ -1,5 +1,10 @@
 import streamlit as st
 import pandas as pd
+import math
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 st.title("The Freefall Experiment")
 st.write("Here is where you can input your data for the free fall experiment, both when using a stopwatch and with photogates.")
 st.markdown(" ### Stopwatch:")
@@ -37,9 +42,25 @@ df_stopwatch = pd.DataFrame({
     "Trial 5 (s)": Strial_5
 })
 st.markdown("#### Entered Data")
+columns3 = df_stopwatch.columns[1:5]
+df_stopwatch["Average Time (s)"] = df_stopwatch[columns3].mean(axis=1)
+df_stopwatch["Calculated 'g' (m/s^2)"] = 2 * df_stopwatch["Height (m)"]/(df_stopwatch["Average Time (s)"]**2)
+df_stopwatch["Calculated uncertainty"] = (((-2 * 0.0005 * df_stopwatch["Height (m)"]/df_stopwatch["Average Time (s)"]**3)**2)+(0.02/df_stopwatch["Average Time (s)"]**2)**2)**0.5
+avg_g_S = df_stopwatch["Calculated 'g' (m/s^2)"].mean()
+avg_uncert_S = df_stopwatch["Calculated uncertainty"].mean()
 st.dataframe(df_stopwatch)
+st.write(f"Average g: {avg_g_S:0.2f} (m/s^2)")
+st.write(f"Average uncertainty: {avg_uncert_S:0.2f}")
+fig, ax = plt.subplots()
+ax.set_ylim(1,15)
+ax.errorbar(df_stopwatch.index, df_stopwatch["Calculated 'g' (m/s^2)"], yerr=df_stopwatch["Calculated uncertainty"], fmt='o', capsize=5)
+ax.set_xlabel("Index")
+ax.set_ylabel("Calculated 'g' (m/s^2)")
+st.pyplot(fig)
 
 st.session_state["df_stopwatch"] = df_stopwatch
+st.session_state["avg_g_S"] = avg_g_S
+st.session_state["avg_uncert_S"] = avg_uncert_S
 
 st.markdown(" ### Photogates:")
 m = st.number_input("Number of distances between photogates:", value=1)
@@ -77,6 +98,23 @@ df_photogate = pd.DataFrame({
 })
 
 st.markdown("#### Entered Data:")
+columns4 = df_photogate.columns[1:5]
+df_photogate["Average Time (s)"] = df_photogate[columns4].mean(axis=1)
+df_photogate["Calculated 'g' (m/s^2)"] = 2 * (df_photogate["Distance (m)"])/(df_photogate['Average Time (s)']**2)
+df_photogate['Calculated uncertainty'] = (((-2 * 0.0005 * df_photogate["Distance (m)"]/(df_photogate["Average Time (s)"])**3)**2)+(0.02/(df_photogate["Average Time (s)"])**2)**2)**0.5
 st.dataframe(df_photogate)
+avg_g_P = df_photogate["Calculated 'g' (m/s^2)"].mean()
+avg_uncert_P = df_photogate["Calculated uncertainty"].mean()
+st.write(f"Average 'g': {avg_g_P:0.2f} (m/s^2)")
+st.write(f"Average uncertainty: {avg_uncert_P:0.2f}")
+
+fig, ax = plt.subplots()
+ax.set_ylim(9,20)
+ax.errorbar(df_photogate.index, df_photogate["Calculated 'g' (m/s^2)"], yerr=df_photogate["Calculated uncertainty"], fmt='o', capsize=5)
+ax.set_xlabel("Index")
+ax.set_ylabel("Calculated 'g' (m/s^2)")
+st.pyplot(fig)
 
 st.session_state["df_photogate"] = df_photogate
+st.session_state["avg_g_P"] = avg_g_P
+st.session_state["avg_uncert_P"] = avg_uncert_P
