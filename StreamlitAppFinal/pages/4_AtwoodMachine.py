@@ -1,5 +1,10 @@
 import streamlit as st
 import pandas as pd
+import math
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 st.title("The Atwood Machine Experiment")
 st.write("Here is where you can input your data for the atwood machine experiment. How many mass configurations did you use?")
 n = st.number_input("Number of mass configurations:", value=1)
@@ -43,6 +48,24 @@ df_machine = pd.DataFrame({
 })
 
 st.markdown("#### Data Entered:")
+columns5 = df_machine.columns[1:5]
+df_machine["Average Time (s)"] = df_machine[columns5].mean(axis=1)
 st.dataframe(df_machine)
+
+if dist: 
+    df_machine["Calculated 'g' (m/s^2)"] = 2 * dist * (df_machine["Mass 1 (kg)"] + df_machine["Mass 2 (kg)"])/(df_machine["Average Time (s)"]**2 * (df_machine["Mass 1 (kg)"] - df_machine["Mass 2 (kg)"]))
+    df_machine["Calculated uncertainty"] = (((0.0004*(df_machine["Mass 1 (kg)"] + df_machine["Mass 2 (kg)"]))/(df_machine["Average Time (s)"]**2 * (df_machine["Mass 1 (kg)"] - df_machine["Mass 2 (kg)"])))**2 + ((0.001*(df_machine["Mass 1 (kg)"] + df_machine["Mass 2 (kg)"]))/(df_machine["Average Time (s)"]**2) * (df_machine["Mass 1 (kg)"] - df_machine["Mass 2 (kg)"]))**2 + 2*((0.000774 * df_machine["Average Time (s)"]**2 * ((df_machine["Mass 1 (kg)"] - df_machine["Mass 2 (kg)"]) - (df_machine["Mass 1 (kg)"] + df_machine["Mass 2 (kg)"])))/((df_machine["Average Time (s)"]**2 * (df_machine["Mass 1 (kg)"] - df_machine["Mass 2 (kg)"]))**2))**2)**0.5
+    avg_g_M = df_machine["Calculated 'g' (m/s^2)"].mean()
+    avg_uncert_M = df_machine["Calculated uncertainty"].mean()
+    st.write(f"Average 'g': {avg_g_M:0.2f} (m/s^2)")
+    st.write(f"Average uncertainty: {avg_uncert_M:0.2f}")
+    fig, ax = plt.subplots()
+    ax.set_ylim(8,25)
+    ax.errorbar(df_machine.index, df_machine["Calculated 'g' (m/s^2)"], yerr=df_machine["Calculated uncertainty"], fmt='o', capsize=5)
+    ax.set_xlabel("Index")
+    ax.set_ylabel("Calculated 'g' (m/s^2)")
+    st.pyplot(fig)
+    st.session_state["avg_g_M"] = avg_g_M
+    st.session_state["avg_uncert_M"] = avg_uncert_M
 
 st.session_state["df_machine"] = df_machine
