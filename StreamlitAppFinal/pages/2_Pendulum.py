@@ -1,5 +1,10 @@
 import streamlit as st
 import pandas as pd
+import math
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 st.title("The Pendulum Experiment!")
 st.write("Here is where you can imput your data from the pendulum experiment")
 st.markdown(" ### Changing Angle")
@@ -30,7 +35,26 @@ df_angles = pd.DataFrame({
     "Trial 3 (s)": Atrial_3
 })
 st.markdown("#### Entered Data:")
+columns1 = df_angles.columns[1:3]
+df_angles["Average Time (s)"] = df_angles[columns1].mean(axis=1)
+df_angles["Period (s)"] = df_angles["Average Time (s)"]/5
 st.dataframe(df_angles)
+
+if Alength:
+    df_angles["Calculated 'g' (m/s^2)"] = (4 * math.pi**2 * Alength)/((df_angles["Period (s)"])**2)
+    df_angles["Calculated uncertainty"] = ((((0.005*2*math.pi)/(df_angles["Period (s)"]))**2)+((0.08*Alength*(math.pi**2)/(df_angles["Period (s)"])**3)))**0.5
+    avg_g_A = df_angles["Calculated 'g' (m/s^2)"].mean()
+    avg_uncert_A = df_angles["Calculated uncertainty"].mean()
+    st.write(f"Average g: {avg_g_A:0.2f} m/s^2")
+    st.write(f"Average uncertainty: {avg_uncert_A:0.2f}")
+    fig, ax = plt.subplots()
+    ax.set_ylim(5,18)
+    ax.errorbar(df_angles.index, df_angles["Calculated 'g' (m/s^2)"], yerr=df_angles["Calculated uncertainty"], fmt='o', capsize=5)
+    ax.set_xlabel("Index")
+    ax.set_ylabel("Calculated 'g' (m/s^2)")
+    st.pyplot(fig)
+    st.session_state["avg_g_A"] = avg_g_A
+    st.session_state["avg_uncert_A"] = avg_uncert_A
 
 st.session_state["df_angles"] = df_angles
 
@@ -62,6 +86,25 @@ df_lengths = pd.DataFrame({
     "Trial 3 (s)": Ltrial_3
 })
 st.markdown("#### Entered Data:")
+columns2 = df_lengths.columns[1:3]
+df_lengths["Average Time (s)"] = df_lengths[columns2].mean(axis=1)
+df_lengths["Period (s)"] = df_lengths["Average Time (s)"]/5
 st.dataframe(df_lengths)
+
+if Langle:
+    df_lengths["Calculated 'g' (m/s^2)"] = (4 * math.pi**2 *(df_lengths['Length (meters)']))/((df_lengths["Period (s)"])**2)
+    df_lengths["Calculated uncertainty"] = ((((0.005*2*math.pi)/(df_lengths["Period (s)"]))**2)+((0.08*(df_lengths["Length (meters)"])*(math.pi**2)/(df_lengths["Period (s)"])**3)))**0.5
+    avg_g_L = df_lengths["Calculated 'g' (m/s^2)"].mean()
+    avg_uncert_L = df_lengths["Calculated uncertainty"].mean()
+    st.write(f"Average g: {avg_g_L:0.2f} m/s^2")
+    st.write(f"Average uncertainty: {avg_uncert_L:0.2f}")
+    fig, ax = plt.subplots()
+    ax.set_ylim(5,18)
+    ax.errorbar(df_lengths.index, df_lengths["Calculated 'g' (m/s^2)"], yerr=df_lengths["Calculated uncertainty"], fmt='o', capsize=5)
+    ax.set_xlabel("Index")
+    ax.set_ylabel("Calculated 'g' (m/s^2)")
+    st.pyplot(fig)
+    st.session_state["avg_g_L"] = avg_g_L
+    st.session_state["avg_uncert_L"] = avg_uncert_L
 
 st.session_state["df_lengths"] = df_lengths
