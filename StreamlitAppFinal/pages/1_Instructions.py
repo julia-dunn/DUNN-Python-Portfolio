@@ -1,5 +1,9 @@
 import streamlit as st
-import pandas as pd 
+import pandas as pd
+import math
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 st.markdown(" ## Instructions!")
 st.write("Just in case you're not sure what I am talking about, here is an overview of the different methods you might use to calculate 'g'.")
