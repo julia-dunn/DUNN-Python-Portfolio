@@ -1,5 +1,10 @@
 import streamlit as st
 import pandas as pd
+import math
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 st.title("The Incline Experiment")
 st.write("Here you can input your data for the incline experiment. First, input the standard dimensions for your setup.")
 Ilength = st.number_input("Length of track:", value=None, placeholder="(meters)")
@@ -43,6 +48,24 @@ df_incline = pd.DataFrame({
 })
 
 st.markdown("#### Entered Data")
+columns6 = df_incline.columns[1:5]
+df_incline["Average Time (s)"] = df_incline[columns6].mean(axis=1)
 st.dataframe(df_incline)
+
+if Ilength:
+    df_incline["Angle (radians)"] = np.arcsin(df_incline["Height (m)"]/Ilength)
+    df_incline["Calculated 'g' (m/s^2)"] = 14 * df_incline["Distance x (m)"]/(5 * df_incline["Average Time (s)"]**2 * np.sin(df_incline["Angle (radians)"]))
+    df_incline["Calculated uncertainty"] = ((14 * 0.0005 / (5 * df_incline["Average Time (s)"]**2 * np.sin(df_incline["Angle (radians)"])))**2 + ((0.28 * df_incline["Distance x (m)"])/(5 * df_incline["Average Time (s)"]**2 * np.sin(df_incline["Angle (radians)"])))**2 + ((14 * df_incline["Distance x (m)"] * np.cos(df_incline["Angle (radians)"]) * (1/np.sin(df_incline["Angle (radians)"])) * (2*(0.0005/(1 + (df_incline["Height (m)"]/Ilength)**2))**2))/(5 * (df_incline["Average Time (s)"]**2)))**2)**0.5
+    avg_g_I = df_incline["Calculated 'g' (m/s^2)"].mean()
+    avg_uncert_I = df_incline["Calculated uncertainty"].mean()
+    st.write(f"Average g: {avg_g_I:0.2f} (m/s^2)")
+    fig, ax = plt.subplots()
+    ax.set_ylim(5,18)
+    ax.errorbar(df_incline.index, df_incline["Calculated 'g' (m/s^2)"], yerr=df_incline["Calculated uncertainty"], fmt='o', capsize=5)
+    ax.set_xlabel("Idex")
+    ax.set_ylabel("Calculated 'g' (m/s^2)")
+    st.pyplot(fig)
+    st.session_state["avg_g_I"] = avg_g_I
+    st.session_state["avg_uncert_I"] = avg_uncert_I
 
 st.session_state["df_incline"] = df_incline
