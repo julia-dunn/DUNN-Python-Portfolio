@@ -94,7 +94,7 @@ if "df_machine" and "distance" and "avg_g_M" and "avg_uncert_M" in st.session_st
         fig, ax = plt.subplots()
         ax.set_ylim(7,24)
         ax.errorbar(df_machine.index, df_machine["Calculated 'g' (m/s^2)"], yerr=df_machine["Calculated uncertainty"], fmt='o', capsize=5)
-        ax.set_xlabel("Idex")
+        ax.set_xlabel("Index")
         ax.set_ylabel("Calculated 'g' (m/s^2)")
         st.pyplot(fig)
     else:
@@ -114,7 +114,7 @@ if "df_incline" and "Ilength" and "avg_g_I" and "avg_uncert_I" in st.session_sta
         fig, ax = plt.subplots()
         ax.set_ylim(8,16)
         ax.errorbar(df_incline.index, df_incline["Calculated 'g' (m/s^2)"], yerr=df_incline["Calculated uncertainty"], fmt='o', capsize=5)
-        ax.set_xlabel("Idex")
+        ax.set_xlabel("Index")
         ax.set_ylabel("Calculated 'g' (m/s^2)")
         st.pyplot(fig)
     else:
