@@ -25,7 +25,7 @@ st.latex(r'''
 st.markdown(" ### Second: Free fall")
 st.write("For the method with a mass in freefall, the setup is once again pretty simple. You will need a marble/mass, a way to tell time, pictured is a photogate, a meter stick, and a stand. Align the photogates a measured distance apart by attaching them to the stand as pictured below.")
 with st.columns(3)[1]:
-    st.image("/StreamlitAppFinal/assets/screenshot_freefall.png") # returns image in streamlit platform
+    st.image("https://freeimage.host/i/3eIFOep") # returns image in streamlit platform
 st.write("You will drop the object of a known mass from varying heights and measure the time it takes the mass to fall.")
 st.write("You should see that the time it takes to fall depends clearly on the height. With both measurements, the acceleration due to gravity 'g' can be calculated with the following equation:")
  # uses latex syntax to return currectly formatted expression into streamlit app
@@ -37,7 +37,7 @@ st.latex(r'''
 st.markdown(" ### Third: The Atwood Machine")
 st.write("An atwood machine is a mechanism which uses a light strong to attach two masses on either side of a pulley. For this method, you will need a stand, a lightweight pulley, a lightweight string, a set of multiple masses, a meter stick, and something to measure time, whether that is a stopwatch or a photogate. Setup as depicted below:")
 with st.columns(3)[1]:
-    st.image("/StreamlitAppFinal/assets/screenshot_atwoodmachine.png") # returns image in streamlit platform
+    st.image("https://freeimage.host/i/3eI3qAB") # returns image in streamlit platform
 st.write("You will set up two objects of different masses on either side of the pulley and allow them to accelerate a fixed distance. Measure the amount of time it takes for the masses to travel the given distance.")
 st.write("You will see that the time it takes depends on the distance, as well as each of the masses. The acceleration due to gravity 'g' can be calculated with the following equation:")
  # uses latex syntax to return correctly formatted expression into streamlit app
@@ -49,7 +49,7 @@ st.latex(r'''
 st.markdown(" ### Fourth: Incline")
 st.write("The final method you could use to calculate the acceleration due to gravity is a mass sliding down a cart. For this experiment, you will need an incline, a marble or cart, a meter stick, and a stopwatch or a photogate. Setup the materials such that you can change the angle of the incline and measure the distance the mass travels, as demonstrated below.")
 with st.columns(3)[1]:
-    st.image("/StreamlitAppFinal/assets/screenshot_incline.png") # returns image in streamlit platform
+    st.image("https://freeimage.host/i/3eIf2Fs") # returns image in streamlit platform
 st.write("You will drop the marble such that it rolls different distances down the incline and measure the time it takes. In addition, you will measure the time it takes the ball to travel a fixed distance with changing angles of incline.")
 st.write("You will see that the time it takes for the marble to fall depends both on the distance it travels and the angle of incline. The acceleration due to gravity 'g' can be calculated with the following equation:")
  # uses latex syntax to return correctly formatted expression into streamlit app
