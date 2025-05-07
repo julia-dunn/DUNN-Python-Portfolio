@@ -18,3 +18,30 @@ Third is the Atwood Machine, a much more complicated setup that demonstrates how
 ![Atwood Machine](https://cdn1.byjus.com/wp-content/uploads/2022/06/atwood-machine1.png)
 
 Finally, an incline. Once again, most people are familiar with the idea that when you roll something, like a marble, down a hill, it will accelerate. It is more complicated, however, when you consider the rotational energy in addition to the translational kinetic energy the object gains. That factor, once again, makes calculations for g slightly more complicated than the typical free fall. 
+
+### Setup and Run Instructions
+
+There are a few required libraries for this app in order to run the necessary calculations. They are listed in the requirements file within the portfolio, and include:
+- Streamlit
+- Pandas
+- Numpy 
+- Matplotlib
+
+In order to install these libraries, run the following commands within your terminal:
+```
+{
+    pip install streamlit
+    pip install pandas
+    pip install numpy
+    pip install matplotlib
+}
+```
+
+Then, to run the app locally, run this command in the integrated terminal:
+```
+{
+    streamlit run main.py
+}
+```
+In addition, you can access the platform via this link!
+[🔎](https://physics-right-of-passage.streamlit.app/)
