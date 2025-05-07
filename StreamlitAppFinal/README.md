@@ -22,10 +22,10 @@ Finally, an incline. Once again, most people are familiar with the idea that whe
 ### Setup and Run Instructions
 
 There are a few required libraries for this app in order to run the necessary calculations. They are listed in the requirements file within the portfolio, and include:
-- Streamlit
-- Pandas
-- Numpy 
-- Matplotlib
+- Streamlit 1.41.1
+- Pandas 2.0
+- Numpy 3.1
+- Matplotlib 3.10.0
 
 In order to install these libraries, run the following commands within your terminal:
 ```
@@ -44,4 +44,6 @@ Then, to run the app locally, run this command in the integrated terminal:
 }
 ```
 In addition, you can access the platform via this link!
+
 [🔎](https://physics-right-of-passage.streamlit.app/)
+
