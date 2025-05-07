@@ -25,7 +25,7 @@ st.latex(r'''
 st.markdown(" ### Second: Free fall")
 st.write("For the method with a mass in freefall, the setup is once again pretty simple. You will need a marble/mass, a way to tell time, pictured is a photogate, a meter stick, and a stand. Align the photogates a measured distance apart by attaching them to the stand as pictured below.")
 with st.columns(3)[1]:
-    st.image("Screenshot 2025-05-01 at 3.51.19 PM.png") # returns image in streamlit platform
+    st.image("/Screenshot 2025-05-01 at 3.51.19 PM.png") # returns image in streamlit platform
 st.write("You will drop the object of a known mass from varying heights and measure the time it takes the mass to fall.")
 st.write("You should see that the time it takes to fall depends clearly on the height. With both measurements, the acceleration due to gravity 'g' can be calculated with the following equation:")
  # uses latex syntax to return currectly formatted expression into streamlit app
