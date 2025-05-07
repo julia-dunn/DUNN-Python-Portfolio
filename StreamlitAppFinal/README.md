@@ -47,3 +47,14 @@ In addition, you can access the platform via this link!
 
 [🔎](https://physics-right-of-passage.streamlit.app/)
 
+### App Features
+
+### References and Resources
+- [Latex Syntax](https://docs.streamlit.io/develop/api-reference/text/st.latex)
+- [Pendulum Information](https://www.brainkart.com/article/Acceleration-Due-to-Gravity-Using-Simple-Pendulum_36366/)
+- [Format Troubleshooting](https://stackoverflow.com/questions/70932538/how-to-center-the-title-and-an-image-in-streamlit)
+- [Page Link](https://docs.streamlit.io/develop/api-reference/widgets/st.page_link)
+- [Streamlit Cheat Sheet](https://docs.streamlit.io/develop/quick-reference/cheat-sheet)
+- [Markdown Syntax Cheat Sheet](https://www.markdownguide.org/basic-syntax/#links)
+
+### Visual Examples
