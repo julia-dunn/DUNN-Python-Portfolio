@@ -42,8 +42,8 @@ for i in range(n):
     Mtrial_3.append(Mt3)
     Mtrial_4.append(Mt4)
     Mtrial_5.append(Mt5)
-
-df_machine = pd.DataFrame({ # creates pandas dataframe from lists
+ # creates pandas dataframe from lists
+df_machine = pd.DataFrame({
     "Mass 1 (kg)": mass1,
     "Mass 2 (kg)": mass2,
     "Trial 1 (s)": Mtrial_1,

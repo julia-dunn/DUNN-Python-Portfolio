@@ -37,8 +37,8 @@ for i in range(n):
     Strial_3.append(St3)
     Strial_4.append(St4)
     Strial_5.append(St5)
-
-df_stopwatch = pd.DataFrame({ # creates pandas dataframe from lists
+ # creates pandas dataframe from lists
+df_stopwatch = pd.DataFrame({
     "Height (m)": Fheights,
     "Trial 1 (s)": Strial_1,
     "Trial 2 (s)": Strial_2,
@@ -97,8 +97,8 @@ for i in range(m):
     Ptrial_3.append(Pt3)
     Ptrial_4.append(Pt4)
     Ptrial_5.append(Pt5)
-
-df_photogate = pd.DataFrame({ # creates pandas dataframe from lists
+ # creates pandas dataframe from lists
+df_photogate = pd.DataFrame({
     "Distance (m)": Fdistances,
     "Trial 1 (s)": Ptrial_1,
     "Trial 2 (s)": Ptrial_2,

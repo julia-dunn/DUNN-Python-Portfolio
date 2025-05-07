@@ -91,8 +91,8 @@ for i in range(m):
     Ltrial_1.append(Lt1)
     Ltrial_2.append(Lt2)
     Ltrial_3.append(Lt3)
-
-df_lengths = pd.DataFrame({ # creates pandas dataframe from lists
+# creates pandas dataframe from lists
+df_lengths = pd.DataFrame({
     "Length (meters)": lengths,
     "Trial 1 (s)": Ltrial_1,
     "Trial 2 (s)": Ltrial_2,

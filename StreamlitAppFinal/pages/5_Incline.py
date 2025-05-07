@@ -42,8 +42,8 @@ for i in range(n):
     Itrial_3.append(It3)
     Itrial_4.append(It4)
     Itrial_5.append(It5)
-
-df_incline = pd.DataFrame({ # creates pandas dataframe from lists
+ # creates pandas dataframe from lists
+df_incline = pd.DataFrame({
     "Height (m)": Iheights,
     "Distance x (m)": Idistances,
     "Trial 1 (s)": Itrial_1,
