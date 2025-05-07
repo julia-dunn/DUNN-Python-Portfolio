@@ -56,5 +56,10 @@ In addition, you can access the platform via this link!
 - [Page Link](https://docs.streamlit.io/develop/api-reference/widgets/st.page_link)
 - [Streamlit Cheat Sheet](https://docs.streamlit.io/develop/quick-reference/cheat-sheet)
 - [Markdown Syntax Cheat Sheet](https://www.markdownguide.org/basic-syntax/#links)
+- Simon-Robertson, Anna. Instruction for Physics A: Lab 1. Fall, 2023
+- Simon-Robertson, Anna. Instruction for Physics A: Lab 2. Fall, 2023
+- Simon-Robertson, Anna. Instruction for Physics A: Lab 3. Fall, 2023
+- Simon-Robertson, Anna. Instruction for Physics A: Lab 4. Fall, 2023
+- Serway, R. and Jewett, J. Physics for Scientists and Engineers. Cengage Learning, 2019.
 
 ### Visual Examples
