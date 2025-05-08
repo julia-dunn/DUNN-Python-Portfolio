@@ -36,11 +36,16 @@ To run the app locally, use this command:
 }
 ```
 
-## Key features:
-- Photos of different species of penguins!
-- Photos of the different islands the penguins are from!
-- Engagement with viewer regarding opinion of penguins
-- Encouragement of viewer to interact with World Wildlife website (adopt a penguin)!
-- Filters by year, species, and island
+## Appp feature
+- Many different types of user interactive features
+    - Slide bar
+    - Drop down
+    - Multi-select
+    - Readable dataframe
+    - In text links
+- Direct analysis of data through a dataframe
+- Images which change depending on user input
 
-Enjoy the App!
+## Visual Examples
+
+
