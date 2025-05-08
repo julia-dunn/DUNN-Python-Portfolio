@@ -168,3 +168,9 @@ Data returned:
 - Serway, R. and Jewett, J. Physics for Scientists and Engineers. Cengage Learning, 2019.
 
 ### Visual Examples
+
+Here is a demonstration of the app using data I collected my freshman year in Physics A at Notre Dame. As you can see, my data was incredibly inaccurate. Often, the values I measured and calculated were far off from the expected value g=9.8.
+
+##### Pendulum 
+
+![Inputting Data]()
