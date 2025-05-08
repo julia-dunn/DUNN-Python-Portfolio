@@ -1,7 +1,8 @@
-# ReadMe for Who Are Palmer's Penguins?
+# Who Are Palmer's Penguins?
 
-## Purpose of App:
-- Learn more about penguins from many different locations! Penguins of different species and sizes are both interesting and adorable
+## Project Overiveiw
+
+The goal of this app is to learn about penguins from many different locations. Although the app doesn't necessarily solve a tangible problem, it is an excellent example for users to understand and engage with Streamlit software. This app specifically allows users to manipulate the platform such that they can learn about different species and sizes of penguins, including where they're from!
 
 ## What's in the dataset:
 - species
@@ -20,13 +21,31 @@
 - Streamlit
 - penguins.vsv
 
-In order to run basic-streamlit-app, run in terminal "streamlit run basic-streamlit-app/main.py"
+To ensure the above requirements are installed, run this command in your terminal:
+```
+{
+    pip install streamlit
+    pip install pandas
+}
+```
 
-## Key features:
-- Photos of different species of penguins!
-- Photos of the different islands the penguins are from!
-- Engagement with viewer regarding opinion of penguins
-- Encouragement of viewer to interact with World Wildlife website (adopt a penguin)!
-- Filters by year, species, and island
+To run the app locally, use this command:
+```
+{
+    streamlit run main.py
+}
+```
 
-Enjoy the App!
+## Appp feature
+- Many different types of user interactive features
+    - Slide bar
+    - Drop down
+    - Multi-select
+    - Readable dataframe
+    - In text links
+- Direct analysis of data through a dataframe
+- Images which change depending on user input
+
+## Visual Examples
+
+
