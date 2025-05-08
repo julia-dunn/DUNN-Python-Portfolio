@@ -49,6 +49,30 @@ In addition, you can access the platform via this link!
 
 ### App Features
 
+#### Informative Pages
+
+The purpose of this app is to provide a usable resource for introductory physics students. The landing page features links to each of the pages where the user can input data, as well as an instructions page to develop an understanding of the experiments. In addition, the homepage is where the user can learn more about what uncertainty is and why it is important for the scientific method.
+
+#### Data Input
+
+There are four pages of this app where users can input data from their experiments. Each page is specific for one experiment, the pendulum, freefall, the atwood machine, or the incline. Here, the user will import setup schematics and experimental measurements.
+
+##### Pendulum 
+
+Data Required for Changing Angle 
+- Length of pendulum (m)
+- Number of angles measured 
+- For each setup:
+    - Angle (degrees)
+    - Time for 3 trials (s)
+
+Data Required for Changing Length
+- Angle of elevation (degrees)
+- Number of lengths measured 
+- For each setup:
+    - Length (m)
+    - Time for 3 trials (s)
+
 ### References and Resources
 - [Latex Syntax](https://docs.streamlit.io/develop/api-reference/text/st.latex)
 - [Pendulum Information](https://www.brainkart.com/article/Acceleration-Due-to-Gravity-Using-Simple-Pendulum_36366/)
