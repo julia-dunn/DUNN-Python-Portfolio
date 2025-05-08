@@ -15,6 +15,8 @@ Within this repository, I'd like to remain structured and organized such that bo
 
 Use this app to learn more about Palmer's Penguins: who they are and where they came from. Penguins are one of the most interesting animals and as you interact with this platform, I hope you are intruiged by how the statistical information demonstrates their demographic.
 
+This project is valuable because it allowed me to develop introductory skills in building a platform. It forced me to use and undestand specific syntax required for formatting and user interaction. As I have continued to develop projects, such as the NER app and the Physics app, I have find it valuable to look back to where I started and what I have learned.
+
 ##### [Tidy Data Project: Federal Research and Development Budget](https://github.com/julia-dunn/DUNN-Python-Portfolio/tree/3575b25a9349fec8471f8504f0438e34ec56ffd9/TidyData-Project)
 
 This jupiter notebook uses tidy data principles to clean and analyze data regarding the federal allocation of the research and development budgets across different departments. This dataset considers data from 1976 to 2017, providing data regarding many different departments. The goal of my project was to tidy the data and complete some data analysis to demonstrate the importance of tidy data such that it can be undestood logically. 
