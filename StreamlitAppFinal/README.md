@@ -55,23 +55,47 @@ The purpose of this app is to provide a usable resource for introductory physics
 
 #### Data Input
 
-There are four pages of this app where users can input data from their experiments. Each page is specific for one experiment, the pendulum, freefall, the atwood machine, or the incline. Here, the user will import setup schematics and experimental measurements.
+There are four pages of this app where users can input data from their experiments. Each page is specific for one experiment, the pendulum, freefall, the atwood machine, or the incline. Here, the user will import setup schematics and experimental measurements. Once the necessary data has been entered into the platform, a dataframe summarizing the entered data is returned. In addition, relevant average values, the calculated 'g' value, and the calculated uncertainty are added to the dataframe for each setup.
 
 ##### Pendulum 
 
-Data Required for Changing Angle 
+Data Required for Changing Angle:
 - Length of pendulum (m)
 - Number of angles measured 
 - For each setup:
     - Angle (degrees)
     - Time for 3 trials (s)
+Data Returned for Changing Angle:
+- Average Time 
+- Period 
+- Average 'g'
+- Average uncertainty
 
-Data Required for Changing Length
+Data Required for Changing Length:
 - Angle of elevation (degrees)
 - Number of lengths measured 
 - For each setup:
     - Length (m)
     - Time for 3 trials (s)
+Data Returned for Changing Length:
+- Average time
+- Period
+- Average 'g'
+- Average uncertainty
+
+##### The Freefall Experiment 
+
+Data required for stopwatch:
+- Number of heights 
+- For each setup:
+    - Time for 5 trials (s)
+Data Returned for stopwatch: 
+
+Data required for photogates:
+- Distance between photogates
+- Number of distances measured 
+- For each setup:
+    -Time for 5 trials (s)
 
 ### References and Resources
 - [Latex Syntax](https://docs.streamlit.io/develop/api-reference/text/st.latex)
