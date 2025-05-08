@@ -173,4 +173,27 @@ Here is a demonstration of the app using data I collected my freshman year in Ph
 
 ##### Pendulum 
 
-![Inputting Data]()
+![Inputting Data - Angles](pendulum_angles_1.png)
+![Dataframe - Angles](pendulum_angles_2.png)
+![Visualization - Angles](pendulum_angles_3.png)
+
+![Inputting Data - Lengths](pendulum_lengths_1.png)
+![Dataframe - Lengths](pendulum_lengths_2.png)
+![Visualization - Lengths](pendulum_lengths_3.png)
+
+##### Freefall
+
+![Inputting Data and Dataframe- Freefall](freefall_1.png)
+![Visualization](freefall_2.png)
+
+##### Atwood Machine
+
+![Atwood Machine Image](atwood_machine.png)
+
+##### Incline 
+
+![Incline Image](incline.png)
+
+##### Final Results
+
+![Final Results](final_comparison.png)
