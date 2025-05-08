@@ -48,4 +48,4 @@ To run the app locally, use this command:
 
 ## Visual Examples
 
-
+![App Main Page](https://github.com/julia-dunn/DUNN-Python-Portfolio/blob/main/basic-streamlit-app/Screenshot%202025-05-08%20at%203.38.58%20PM.png?raw=true)
