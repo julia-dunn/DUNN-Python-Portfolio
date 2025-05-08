@@ -55,7 +55,7 @@ The purpose of this app is to provide a usable resource for introductory physics
 
 #### Data Input
 
-There are four pages of this app where users can input data from their experiments. Each page is specific for one experiment, the pendulum, freefall, the atwood machine, or the incline. Here, the user will import setup schematics and experimental measurements. Once the necessary data has been entered into the platform, a dataframe summarizing the entered data is returned. In addition, relevant average values, the calculated 'g' value, and the calculated uncertainty are added to the dataframe for each setup.
+There are four pages of this app where users can input data from their experiments. Each page is specific for one experiment, the pendulum, freefall, the atwood machine, or the incline. Here, the user will import setup schematics and experimental measurements. Once the necessary data has been entered into the platform, a dataframe summarizing the entered data is returned. In addition, relevant average values, the calculated 'g' value, and the calculated uncertainty are added to the dataframe for each setup. In addition, once the user inputs data for an experimental procedure, a graph is generated with the calculated 'g' and uncertainty for each trial. On the final results page, each of these visualizations, as well as the average 'g' and average uncertainty values are cumulated and compared. It is then reported which method had the lowest uncertainty and which had the least inaccruacy, that is which value was the closest to the known 9.8 m/s^2.
 
 ##### Pendulum 
 
@@ -65,6 +65,7 @@ Data Required for Changing Angle:
 - For each setup:
     - Angle (degrees)
     - Time for 3 trials (s)
+
 Data Returned for Changing Angle:
 - Average Time 
 - Period 
@@ -77,6 +78,7 @@ Data Required for Changing Length:
 - For each setup:
     - Length (m)
     - Time for 3 trials (s)
+
 Data Returned for Changing Length:
 - Average time
 - Period
@@ -89,13 +91,56 @@ Data required for stopwatch:
 - Number of heights 
 - For each setup:
     - Time for 5 trials (s)
+
 Data Returned for stopwatch: 
+- Average Time 
+- Calculated 'g'
+- Calculated Uncertainty
+- Average 'g'
+- Average uncertainty
 
 Data required for photogates:
 - Distance between photogates
 - Number of distances measured 
 - For each setup:
     -Time for 5 trials (s)
+
+Data Returned for photogates: 
+- Average Time 
+- Calculated 'g'
+- Calculated Uncertainty
+- Average 'g'
+- Average uncertainty
+
+##### The Atwood Machine
+
+ Data Required:
+- Number of mass configurations
+- Distance masses were allowed to fall 
+- For each setup:
+    - Mass 1
+    - Mass 2
+    Time for 5 trials (s)
+
+Data Returned:
+- Average Time 
+- Average 'g'
+- Average uncertainty
+
+##### Incline
+
+Data Required:
+- Length of track
+- Number of heights measured
+- For each setup:
+    - Height of track
+    - Distance traveled along track
+    - Time for 5 trials (s)
+
+Data returned:
+- Average time 
+- Average 'g'
+- Average uncertainty 
 
 ### References and Resources
 - [Latex Syntax](https://docs.streamlit.io/develop/api-reference/text/st.latex)
